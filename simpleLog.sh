@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # log-simple.sh — minimal logging helpers with millisecond timestamps.
+# SPDX-License-Identifier: AGPL-3.0
+# Copyright (C) 2026 Someone-Offline
+# https://github.com/Someone-Offline/simpleLog
+# AI disclosure: written with the help of Claude (Anthropic); see README.md.
 # Output: 2026-11-14--14-36-25-123 INFO:  message
 #
 #   trace "message"   # TRACE:  dim grey  stderr
