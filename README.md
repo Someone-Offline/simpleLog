@@ -40,7 +40,7 @@ Minimal, dependency-free logging helpers for Bash scripts, with six standard log
 Copy `log-simple.sh` into your project, next to the scripts that use it:
 
 ```bash
-git clone https://github.com/<your-user>/log-simple.git
+git clone https://github.com/Someone-Offline/simpleLog.git
 cp log-simple/log-simple.sh /path/to/your/project/
 ```
 
