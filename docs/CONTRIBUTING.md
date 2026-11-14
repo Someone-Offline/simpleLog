@@ -1,6 +1,6 @@
-# Contributing to log-simple
+# Contributing simpleLog
 
-Thank you for your interest in improving `log-simple`. This is a small,
+Thank you for your interest in improving `simpleLog`. This is a small,
 single-maintainer project, so clear and focused contributions are the easiest
 to review and merge.
 
@@ -23,7 +23,7 @@ to review and merge.
 Changes are judged against these goals. Please keep them in mind before
 proposing a feature.
 
-1. **Single file.** The library stays one sourceable file, `log-simple.sh`.
+1. **Single file.** The library stays one sourceable file, `simpleLog.sh`.
 2. **No dependencies on Bash 5+.** No external commands in the normal path.
    Older Bash may fall back to standard tools such as `date`.
 3. **Small.** New features must be useful to most users. Niche needs are better
@@ -75,7 +75,7 @@ a migration note in `CHANGELOG.md`.
 
 ## Coding style
 
-Follow the style already used in `log-simple.sh`:
+Follow the style already used in `simpleLog.sh`:
 
 - Indent with **4 spaces**, no tabs.
 - Use `[[ … ]]` for tests and `(( … ))` for arithmetic.
@@ -95,7 +95,7 @@ Follow the style already used in `log-simple.sh`:
 Linting with **ShellCheck** is recommended:
 
 ```bash
-shellcheck log-simple.sh
+shellcheck simpleLog.sh
 ```
 
 > The current code has not yet been checked with ShellCheck. If it reports
@@ -110,30 +110,30 @@ run these checks and confirm the expected results.
 
 **1. Syntax check**: no output means no errors:
 ```bash
-bash -n log-simple.sh
+bash -n simpleLog.sh
 ```
 
 **2. Demo**: all six levels appear, and the line after `FATAL` is still printed:
 ```bash
-bash log-simple.sh
+bash simpleLog.sh
 ```
 
 **3. Strict mode and level filtering**: only `INFO` and `FATAL` are shown,
 then `W=1 E=0 F=1 still alive`:
 ```bash
-bash -c 'set -euo pipefail; source ./log-simple.sh
+bash -c 'set -euo pipefail; source ./simpleLog.sh
          trace t; debug d; info i; LOG_LEVEL=ERROR warn hidden; fatal f
          echo "W=${#WARNINGS[@]} E=${#ERRORS[@]} F=${#FATALS[@]} still alive"'
 ```
 
 **4. No colour in files**: must print `0`:
 ```bash
-bash log-simple.sh > /tmp/out.log 2>&1; grep -c $'\e' /tmp/out.log
+bash simpleLog.sh > /tmp/out.log 2>&1; grep -c $'\e' /tmp/out.log
 ```
 
 **5. Timestamp format**: must print `OK`:
 ```bash
-bash -c 'source ./log-simple.sh; info x' \
+bash -c 'source ./simpleLog.sh; info x' \
   | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}--[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{3} ' && echo OK
 ```
 
