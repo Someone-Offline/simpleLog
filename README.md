@@ -37,11 +37,11 @@ Minimal, dependency-free logging helpers for Bash scripts, with six standard log
 
 ## Installation
 
-Copy `log-simple.sh` into your project, next to the scripts that use it:
+Copy `simpleLog.sh` into your project, next to the scripts that use it:
 
 ```bash
 git clone https://github.com/Someone-Offline/simpleLog.git
-cp log-simple/log-simple.sh /path/to/your/project/
+cp simpleLog/simpleLog.sh /path/to/your/project/
 ```
 
 Then load it at the top of your script:
@@ -49,13 +49,13 @@ Then load it at the top of your script:
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
-source "$(dirname -- "${BASH_SOURCE[0]}")/log-simple.sh"
+source "$(dirname -- "${BASH_SOURCE[0]}")/simpleLog.sh"
 ```
 
 Run the file directly to see a demo of every level:
 
 ```bash
-bash log-simple.sh
+bash simpleLog.sh
 ```
 
 The demo only runs when the file is executed. Sourcing it loads the functions
@@ -253,7 +253,7 @@ production, and report problems as described in [`SECURITY.md`](docs/SECURITY.md
 This disclosure is **voluntary**. As understood by the maintainer, the AI Act
 does not impose obligations on this repository, because:
 
-- `log-simple.sh` is a logging script, **not an AI system**. It contains no
+- `simpleLog.sh` is a logging script, **not an AI system**. It contains no
   model, learning or inference.
 - The marking of AI-generated output (Article 50(2)) is an obligation on the
   **provider of the AI system** used, not on people who use its output.
