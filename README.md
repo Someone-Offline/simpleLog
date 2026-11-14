@@ -227,14 +227,15 @@ Functions prefixed with `_` are internal and may change.
 
 ---
 
-## Contributing
+## Contributing and contributions made with AI
 
-Issues and pull requests are welcome. Please:
+Contributions are welcome. Before contributing, please
+read and follow the [contributing guide](docs/CONTRIBUTING.md).
 
-1. Keep the library a single file with no external dependencies on Bash 5+.
-2. Test under `set -euo pipefail`.
-3. Check output both in a terminal and redirected to a file (no colour codes
-   should reach the file).
+Security vulnerabilities must be reported as described in the
+[security policy](docs/SECURITY.md), never in a public issue.
+
+Contributions are accepted under the [project's licence](LICENSE), `AGPL-3.0`.
 
 ---
 
@@ -245,7 +246,7 @@ The maintainer defined the requirements, directed the changes and is responsible
 Testing so far was carried out by the AI on GNU Bash 5.2 on Linux; review the code before relying on it.
 
 AI-generated code can contain subtle mistakes. Review it before using it in
-production, and report problems as described in [`SECURITY.md`](SECURITY.md).
+production, and report problems as described in [`SECURITY.md`](docs/SECURITY.md).
 
 ### EU AI Act (Regulation (EU) 2024/1689)
 
@@ -262,11 +263,6 @@ does not impose obligations on this repository, because:
 
 This is not legal advice. If you build an AI system with this library, your
 own obligations under the AI Act depend on that system, not on this library.
-
-### Contributions made with AI
-
-AI-assisted contributions are welcome. Please say so in the pull request
-description, and state which parts were generated and how you tested them.
 
 ---
 
