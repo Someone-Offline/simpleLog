@@ -118,8 +118,6 @@ $ bash simpleLog.sh
 | `error` | One part failed; the rest can continue | stderr | `ERRORS` |
 | `fatal` | The script cannot sensibly continue | stderr | `FATALS` |
 
-The [user guide](docs/GUIDE.md) covers end-of-run summaries, saving problems to a file, timestamp precision, the subshell limitation and how the code is organised.
-
 ## Documentation Folder Structure
 
 ```text
@@ -153,17 +151,17 @@ The [user guide](docs/GUIDE.md) covers end-of-run summaries, saving problems to 
 
 **No colours**: output is going to a file or pipe (including `tee`), or `NO_COLOR` is set. This is intended and keeps log files clean.
 
-**Strange colours, hidden text or fake log lines**: a message contained untrusted input with control characters or newlines. Fix: sanitise it before logging; see [Known limitations and safe usage](docs/SECURITY.md#known-limitations-and-safe-usage).
+**Strange colours, hidden text or fake log lines**: a message contained untrusted input with control characters or newlines. Fix: sanitise it before logging; see [Known limitations and safe usage](.github/SECURITY.md#known-limitations-and-safe-usage).
 
 ## Contributing
 
 Contributions are welcome, including AI-assisted ones. Before contributing,
-please read and follow the [contributing guide](docs/CONTRIBUTING.md).
+please read and follow the [contributing guide](.github/CONTRIBUTING.md).
 
-Security vulnerabilities must be reported as described in the [security policy](docs/SECURITY.md),
+Security vulnerabilities must be reported as described in the [security policy](.github/SECURITY.md),
 never in a public issue.
 
-Changes are listed in the [changelog](docs/CHANGELOG.md).
+Changes are listed in the [changelog](CHANGELOG.md).
 
 Contributions are accepted under the [project's licence](LICENSE), `AGPL-3.0`.
 
