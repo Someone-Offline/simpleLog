@@ -1,10 +1,10 @@
 # simpleLog
 
-## Overview
-
 Minimal, dependency-free logging helper for Bash scripts, with six standard log levels, millisecond timestamps, terminal-aware colours, and in-memory collection of warnings, errors and fatals.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
+
+---
 
 ## Table of contents
 
